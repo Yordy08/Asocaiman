@@ -1,5 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true }
-})
+// nuxt.config.js
+export default {
+  build: {
+    // Configuración de Vite
+    vite: {
+      plugins: [
+        // Aquí puedes agregar plugins personalizados si es necesario
+      ]
+    }
+  }
+}
+

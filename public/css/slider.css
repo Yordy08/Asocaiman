@@ -1,0 +1,141 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajusta la altura a tu gusto */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out; /* Añade transición suave para la opacidad */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Estilos para la primera imagen */
+  .slide:first-child {
+    opacity: 1;
+  }
+  
+  /* Estilos para la segunda imagen */
+  .slide:nth-child(2) {
+    opacity: 0;
+  }
+  
+  /* Estilos para la tercera imagen */
+  .slide:last-child {
+    opacity: 0;
+  }
+  
+  /* Efecto de hover para cambiar la imagen */
+  .slider:hover .slide:first-child {
+    opacity: 0;
+  }
+  
+  .slider:hover .slide:nth-child(2) {
+    opacity: 1;
+  }
+  
+  .slider:hover .slide:last-child {
+    opacity: 0;
+  }
+  
+  /* Efecto de hover para regresar a la primera imagen cuando se quita el mouse */
+  .slider:not(:hover) .slide:first-child {
+    opacity: 1;
+  }
+  
+  .slider:not(:hover) .slide:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .slider:not(:hover) .slide:last-child {
+    opacity: 0;
+  }
+
+
+
+/*   CARD */
+
+.cards-container {
+    clear: both; /* Fuerza que el contenedor se muestre debajo del slider */
+    padding: 40px;
+  }
+  
+  /* Media query para móviles (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    .cards-container {
+      margin-top: -110px;
+    }
+  }
+.card {
+    margin: 50px;
+    padding: 1px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: inline-block; /* Permite que las cards se muestren lado a lado */
+}
+ /* Media query para móviles (max-width: 768px) */
+ @media only screen and (max-width: 768px) {
+    .card {
+        margin: 0px;
+    }
+  }
+
+.card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.card button {
+    margin-top: 10px;
+}
+
+
+/* Lineas verde debajo de los subtitulos
+ */
+.hero.is-primary {
+    background-image: linear-gradient(to bottom, #ffffff, #98A633);
+    background-color: #ffffff;
+  }
+
+  .hero-body {
+    height: 80px;
+    padding: 2rem;
+   
+  }
+  .title {
+    font-size: 36px; /* tamaño de fuente para desktop */
+  }
+  
+  /* Media query para tabletas (max-width: 1024px) */
+  @media only screen and (max-width: 1024px) {
+    .title {
+      font-size: 30px; /* tamaño de fuente para tabletas */
+    }
+  }
+  
+  /* Media query para móviles (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    .title {
+      font-size: 24px; /* tamaño de fuente para móviles */
+    }
+  }
+  
+  /* Media query para móviles pequeños (max-width: 480px) */
+  @media only screen and (max-width: 480px) {
+    .title {
+      font-size: 18px; /* tamaño de fuente para móviles pequeños */
+    }
+  }
