@@ -10,8 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "bulma": "^1.0.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "nuxt": "^3.12.4",
+    "owl.carousel": "^2.3.4",
     "vue": "latest"
   },
   "devDependencies": {
